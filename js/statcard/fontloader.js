@@ -13,7 +13,7 @@ function FontLoader()
 		func = function() { proxy.active = true; callback(); };
 		conf = {
 		  custom: {
-			families: ['Alegreya:n4,n9', 'Lato:n4,i4,n9,i9', 'Bevan:n4'],
+			families: ['Alegreya:n4,n9', 'Lato:n4,i4,n9,i9', 'Bevan:n4', 'Arvo:n7'],
 			urls: ['css/fonts.css'],
 		  },
 		  active: func,

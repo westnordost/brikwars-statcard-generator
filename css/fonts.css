@@ -40,5 +40,11 @@
   font-family: 'Bevan';
   font-style: normal;
   font-weight: 400;
-  src: url(fonts/Bevan-Regular.woff) format('woff');
+  src: local('Bevan Regular'), local('Bevan-Regular'), url(fonts/Bevan-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arvo Bold'), local('Arvo-Bold'), url(fonts/Arvo-Bold.woff) format('woff');
 }

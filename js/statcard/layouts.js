@@ -5,7 +5,7 @@ var layouts =
 		name: 'classic',
 		help: 'as seen on the official <a target="_blank" class="ref" href="http://brikwars.com/supplement"/>supplements page</a> on brikwars.com',
 		
-		serif: "Bevan",
+		serif: "Arvo",
 		sansSerif: "Lato",
 		monospace: "monospace",
 		
@@ -78,7 +78,7 @@ var layouts =
 		name: 'poker',
 		help: '<a target="_blank" class="ref" href="http://www.portablespacemuseum.com/brikwars/resources/">statcard template</a> from portablespacemuseum.com, suitable for professional print',
 		
-		serif: "Bevan",
+		serif: "Arvo",
 		sansSerif: "Lato",
 		monospace: "monospace",
 		
