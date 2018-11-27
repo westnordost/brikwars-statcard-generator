@@ -23,21 +23,14 @@ var mind_types =
 	{
 		name: "Heroic",
 		skill: "1d10",
-		cost: 3,
+		cost: 4,
 		example: "hero"
 	},
 	{
 		name: "Supernatural",
 		skill: "1d12",
-		cost: 4,
+		cost: 8,
 		example: "demigod or immortal"
-	},
-	{
-		name: "Nonpossible",
-		skill: "1d20",
-		cost: 5,
-		disabled: true,
-		example: "BrikThulu"
 	}
 ];
 
@@ -71,9 +64,7 @@ function Mind(moc)
 	this.halfmindTypeId = 0;
 	this.mindCost = 0;
 	
-	this.multiDexterityCost = 0;
 	this.extraMindsCost = 0;
-	this.multiDexterity = 0;
 	this.extraMinds = 0;
 	
 	this.program = "";
@@ -111,20 +102,14 @@ function Mind(moc)
 	{
 		if(this.active)
 		{
-			this.mindCost = mind_types[this.mindTypeId].cost * moc.structure.size;
+			this.mindCost = mind_types[this.mindTypeId].cost;
 			if(this.isHalfMind && mind_types[this.mindTypeId].cost >= 1)
 			{
 				this.mindCost -= moc.structure.size / 2.0;
 			}
-			
-			// cheap mind: either incompetent or other type of half mind
-			var isCheapMind = mind_types[this.mindTypeId].cost < 1 || this.isHalfMind;
-			
-			// cost for enhanced abilities cost as much as the "original mind" (is cheaper when isCheapMind)
-			this.multiDexterityCost = this.multiDexterity * moc.structure.size * (isCheapMind ? 0.5 : 1);
 
-			this.extraMindsCost = this.extraMinds * (this.mindCost + this.multiDexterityCost);
-			this.cost = this.mindCost + this.multiDexterityCost + this.extraMindsCost;
+			this.extraMindsCost = this.extraMinds * this.mindCost;
+			this.cost = this.mindCost + this.extraMindsCost;
 		}
 		else
 		{
@@ -144,9 +129,6 @@ function Mind(moc)
 		
 		this.extraMinds = Math.max(0,Math.round(form.extra_minds.value));
 		if(isNaN(this.extraMinds)) this.extraMinds = 0;
-		
-		this.multiDexterity = Math.max(0,Math.round(form.multi_dexterity.value));
-		if(isNaN(this.multiDexterity)) this.multiDexterity = 0;
 		
 		this.program = form.program.value;
 	};
@@ -180,10 +162,8 @@ function Mind(moc)
 			
 		
 		form.extra_minds.value = this.extraMinds;
-		form.multi_dexterity.value = this.multiDexterity;
 		
 		form.extra_minds_cost.value = this.extraMindsCost;
-		form.multi_dexterity_cost.value = this.multiDexterityCost;
 		
 		form.skill_cost.value = this.mindCost;
 		

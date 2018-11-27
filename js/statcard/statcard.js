@@ -268,24 +268,6 @@ function Statcard()
 				result.push(mt);
 			}
 			
-			// actually not that important to mention...
-			if(moc.mind.multiDexterity > 0)
-			{
-				var md = { title: "", };
-				
-				if(moc.mind.multiDexterity > 1)
-					md.title += moc.mind.multiDexterity + "x ";
-				md.title += "Multidexterity";
-				
-				md.name = "Multidexterity";
-				md.description = 
-					"The number of weapons or tools usable in one turn is " + 
-					"increased by " + moc.mind.multiDexterity + ". This does " +
-					"not grant any extra Actions.";
-				
-				result.push(md);
-			}
-			
 			if(moc.mind.isHalfMind)
 			{
 				var hm = {};
