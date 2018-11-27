@@ -13,4 +13,4 @@ The poker card format statcard resources in the `images/` folder is by Peter San
 
 The fonts in the `css/fonts/` folder are all licensed under the <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web">Open Font License</a>.
 
-The code is ©2015-2018 Tobias Zwick, licensed under the MIT license.
+The code is ©2015-2018 Tobias Zwick, licensed under the <a href="https://opensource.org/licenses/MIT">MIT license</a>.
