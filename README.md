@@ -2,13 +2,12 @@
 
 A statcard generator for Brikwars 2010, written in plain HTML, CSS and JS.
 
-<a href="https://www.westnordost.de/statcard/">Check it out!</a>
+<a href="https://www.westnordost.de/statcard/">&gt;&gt;&gt; Check it out! &lt;&lt;&lt;</a>
 
 ## License and Legal
 
-BrikWars is copyright ©1995-2010 Mike Rayhawk. For more information and the complete rules, please visit <a href="http://www.brikwars.com">http://www.brikwars.com</a>.
-
-The statcards generated with this application can be redistributed under the <a href="http://brikwars.com/rules/2010/legal.htm#fairuse">same conditions as the official BrikWars material</a>.
+BrikWars is copyright ©1995-2010 Mike Rayhawk.
+For more information and the complete rules, please visit <a href="http://www.brikwars.com">http://www.brikwars.com</a>.
 
 The poker card format statcard resources in the `images/` folder is by Peter Sanderson, all other artwork by Mike Rayhawk. Each all rights reserved, I think.
 
