@@ -64,6 +64,20 @@ var weapon_types =
 		notes:"min. 1 Firing Arc, -1 Auto Penalty per Arc, Target size modifiers affect Damage "
 	},
 	{
+		name:"Cannon",
+		category:"Weapon",
+		sizeCost: 3,
+		baseCost: 0,
+		sizeUse: 1,
+		baseUse: 3,
+		sizeRange: 4,
+		baseRange: 0,
+		damage: "(determined by Ammunition)",
+		damageMulSize: false,
+		usePower: true,
+		notes: "requires Reload after each shot, max ammunition Explosive Size of ? (Size)\""
+	},
+	{
 		name:"Launcher",
 		category:"Weapon",
 		sizeCost: 3,
@@ -132,7 +146,7 @@ var weapon_types =
 		damage: "d10 Explosion",
 		damageMulSize: true,
 		usePower: false,
-		notes: "ranged stats are determined by Launcher, if any"
+		notes: "ranged stats are determined by Launcher or Cannon, if any"
 	},
 	{
 		name:"Rocket",
@@ -214,6 +228,22 @@ var weapon_types =
 	},
 	{
 		name:"Bazooka",
+		category:"Weapon",
+		sizeCost: 0,
+		baseCost: 4,
+		sizeUse: 0,
+		baseUse: 3,
+		sizeRange: 0,
+		baseRange: 6,
+		damage: "(determined by Ammunition)",
+		damageMulSize: false,
+		usePower: true,
+		forMinifigs: true,
+		size: 1.5,
+		notes: "requires reload after each shot, max Explosive Size (XS) of 1"
+	},
+	{
+		name:"RailGun",
 		category:"Weapon",
 		sizeCost: 0,
 		baseCost: 4,
